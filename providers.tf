@@ -8,11 +8,11 @@ provider "aws" {
 terraform {
   required_version = ">= 0.11.7"
 
-  # backend "s3" {
-  #   bucket                  = "my-tf-test-bucket-demo-kb-test"
-  #   key                     = "test/backbone"
-  #   region                  = "ap-south-1"
-  #   encrypt                 = "true"
-  #   shared_credentials_file = "~/.aws/credentials"
-  # }
+  backend "s3" {
+    bucket                  = "my-kb-bucket-demo-test"
+    key                     = "test/backbone"
+    region                  = "ap-south-1"
+    encrypt                 = "true"
+    shared_credentials_file = "~/.aws/credentials"
+  }
 }
